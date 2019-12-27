@@ -11,8 +11,8 @@ int n, q, a, b, c, d; ll ans = 0;
 bool dif[10005][10005];
 
 int main() {
-  ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-  cin >> n >> q;
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    cin >> n >> q;
 
     for(int i = 0; i < q; i++){
         cin >> a >> b >> c >> d; a++; b++;
