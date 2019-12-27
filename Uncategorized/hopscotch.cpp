@@ -52,3 +52,6 @@ int main() {
         }
     }
 }
+
+//This uses logN queries and updates using square root decomp, by breaking the array into blocks that you calculate how many steps it takes to get out of, and what index you will land on. 
+//For updates, simply loop back towards 1 starting at the index you updated.
