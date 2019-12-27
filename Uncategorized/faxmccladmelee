@@ -1,0 +1,110 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String name = in.nextLine();
+        if(name.equals("Ice Climbers")){
+            for(int i= 0; i < 80; i++){
+                System.out.println("Shine");
+            }
+        }
+        else if(name.equals("Luigi")){
+            for(int i= 0; i < 40; i++){
+                System.out.println("Shine");
+                System.out.println("Up smash");
+            }
+        }
+        else if(name.equals("Jigglypuff")){
+            for(int i = 0; i < 10; i++){
+               System.out.println("Down special");
+               System.out.println("Neutral air");
+                System.out.println("Up smash");
+                System.out.println("Up air");
+                System.out.println("Down air");
+                System.out.println("Up tilt");
+                
+                System.out.println("Blaster");
+                System.out.println("Shine");
+                
+                
+            }
+        }
+        else if(name.equals("Peach") || name.equals("Captain Falcon")){
+            for(int i = 0; i < 8; i++){
+              System.out.println("Down special");
+              //System.out.println("Back air");   
+               
+                System.out.println("Up smash");
+                System.out.println("Up air");
+                System.out.println("Up special");
+                System.out.println("Down air");
+                System.out.println("Up tilt");
+                
+                System.out.println("Blaster");    //0
+                System.out.println("Neutral air");
+                System.out.println("Shine");
+            }
+            System.out.println("Down special");
+            System.out.println("Up smash");
+            System.out.println("Up air");
+            System.out.println("Up special");
+            
+            System.out.println("Down air");
+            System.out.println("Up tilt");
+            System.out.println("Blaster");
+            System.out.println("Neutral air");
+        }
+        else if(name.equals("Pikachu")){
+            for(int i = 0; i < 11; i++){
+              System.out.println("Back air");
+              System.out.println("Neutral air");
+               
+                System.out.println("Up smash");
+                System.out.println("Up air");
+                System.out.println("Up tilt");
+                System.out.println("Blaster");    //0
+                System.out.println("Shine");
+            }
+             System.out.println("Blaster");    //0
+                System.out.println("Shine");
+                System.out.println("Up smash");
+        }
+        else if(name.equals("Fox")|| name.equals("Falco")){
+        for(int i = 0; i < 11; i++){
+              System.out.println("Neutral air");
+                System.out.println("Up smash");
+                System.out.println("Up air");
+                System.out.println("Up tilt");
+                System.out.println("Back air");
+                System.out.println("Blaster");    //0
+                System.out.println("Shine");
+            }
+             System.out.println("Neutral air");
+                System.out.println("Up smash");
+                System.out.println("Up air");
+        }
+        else{
+           for(int i = 0; i < 10; i++){
+               System.out.println("Down special");
+               System.out.println("Neutral air");
+                System.out.println("Up smash");
+                System.out.println("Up air");
+                System.out.println("Down air");
+                System.out.println("Up tilt");
+                
+                System.out.println("Blaster");
+                System.out.println("Shine");
+                
+                
+            }
+
+
+
+
+        }
+    }
+}
+
+//This question is a hardcode troll question, but I had some spare time (61/100 partial, good luck if you pursue this o.O)
