@@ -11,6 +11,7 @@ public class Main {
     static int rint () throws IOException { return Integer.parseInt(next());}
     static double rdouble () throws IOException { return Double.parseDouble(next());}
     static String rline () throws IOException { return br.readLine().trim(); }
+    static long gcd(long m, long n){ if(n == 0) return m; return gcd(n, m % n); }
     static void out(String a){ pr.print(a); }
     static void out(long a){ pr.print(a); }
     static void outln(String a){ pr.println(a); }
