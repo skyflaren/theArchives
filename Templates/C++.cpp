@@ -14,13 +14,17 @@ char _;
 using namespace std;
 #define f first
 #define s second
+#define pii pair <int, int>
 typedef long long ll;
 typedef unsigned long long ull;
+#define FILL(a, b) memset(a, b, sizeof(a))
+const int INF = 0x3F3F3F3F;
+const int MAX = 1e3 + 5;
 
 int n;
 
 int main() {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     cin >> n;
-
+    
 }
