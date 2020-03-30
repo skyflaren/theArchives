@@ -10,10 +10,11 @@ char _;
 
 
 #include <bits/stdc++.h>
-#define pb push_back
 using namespace std;
+#define pb push_back
 #define f first
 #define s second
+#define ln "\n"
 #define pii pair <int, int>
 typedef long long ll;
 typedef unsigned long long ull;
