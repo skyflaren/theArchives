@@ -1,59 +1,41 @@
-import java.util.*;
-import java.io.*;
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define f first
+#define s second
+#define ln "\n"
+#define pii pair <int, int>
+typedef long long ll;
+typedef unsigned long long ull;
+#define FILL(a, b) memset(a, b, sizeof(a))
+const int INF = 0x3F3F3F3F;
+const int MM = 1e5 + 5;
 
-public class Main {
-   static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static PrintWriter pr = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
-    static StringTokenizer st;
-    static String next () throws IOException { while (st == null || !st.hasMoreTokens())
-	    st = new StringTokenizer(br.readLine().trim());return st.nextToken(); }
-    static long rlong () throws IOException { return Long.parseLong(next());}
-    static int rint () throws IOException { return Integer.parseInt(next());}
-    static double rdouble () throws IOException { return Double.parseDouble(next());}
-    static String rline () throws IOException { return br.readLine().trim(); }
-    static long gcd(long m, long n){ if(n == 0) return m; return gcd(n, m % n); }
-    static void out(String a){ pr.print(a); }
-    static void out(long a){ pr.print(a); }
-    static void outln(String a){ pr.println(a); }
-    static void outln(long a){ pr.println(a); }
-    static void outln(double a){ pr.println(a); }
-    static void outln(long a, long b){ pr.println(a + "  " + b); }
+int n, q; ll BIT[MM], arr[MM], a, b, c;
 
-    public static long BIT[];
-    public static int n;
+void upd(int x, ll v){  //2D
+    for(int i = x; i < MM; i+=i&-i) BIT[i] += v;
+}
+ll quer(int x){
+    ll sum = 0;
+    for(int i = x; i > 0; i-=i&-i) sum += BIT[i];
+    return sum;
+}
 
-    static void upd(int idx, long val) {
-        for (int i = idx; i <= n; i+=i&-i) BIT[i] += val;
-    }
-    static long quer(int idx) {
-        long res = 0;
-        for (int i = idx; i > 0; i-=i&-i) res+= BIT[i];
-        return res;
-    }
-
-    public static void main(String [] args) throws IOException{
-        n = rint(); int q = rint();
-        BIT = new long [n+5];
-        int arr [] = new int[n+5];
-
-        for(int i = 1; i <= n; i++){
-            arr[i] = rint();
-            upd(i, arr[i]);
+int main() {
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    cin >> n >> q;
+    for(int i = 1; i <= n; i++){ cin >> arr[i]; upd(i, arr[i]);}
+    for(int i = 0; i < q; i++){
+        cin >> c;
+        if(c == 1){ 
+            cin >> a >> b; 
+            upd(a, b-arr[a]);
         }
-        for(int i = 0; i < q; i++){
-            int op = rint();
-            if(op == 1){
-                int a = rint(), b = rint();
-                upd(a, b-arr[a]);
-            }
-            else{
-                int a = rint();
-                outln(quer(a)-quer(a-1));
-            }
-        }
-        for(int i = 1; i<= 5; i++){
-            out(quer(i)-quer(i-1) + " ");
-        }
-        pr.close();
+        else{ 
+            cin >> a; 
+            cout << quer(a)-quer(a-1) << ln;
+        } 
     }
+    for(int i = 1; i<= 5; i++) cout << quer(i)-quer(i-1) << " ";
 }
