@@ -19,7 +19,7 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 #define FILL(a, b) memset(a, b, sizeof(a))
-const int INF = 0x3F3F3F3F;
+const int INF = 0x3F3F3F3F, MOD = 1e9+7;
 const int MAX = 1e3 + 5;
 
 int n;
